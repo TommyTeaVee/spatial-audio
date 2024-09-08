@@ -44,7 +44,7 @@ export default async function handler(
 
   if (!username) return res.status(400).json({ error: "Missing username" });
   if (!character) return res.status(400).json({ error: "Missing character" });
-  if (!room) return res.status(400).json({ error: "Missing room_name" });
+  if (!room) return res.status(400).json({ error: "Missing villa_name" });
 
   const livekitHost = wsUrl?.replace("wss://", "https://");
 
@@ -53,7 +53,7 @@ export default async function handler(
 
   try {
     await roomService.getParticipant(room, username);
-    return res.status(401).json({ error: "Username already exists in room" });
+    return res.status(401).json({ error: "Username already exists in villa" });
   } catch {
     // If participant doesn't exist, we can continue
   }

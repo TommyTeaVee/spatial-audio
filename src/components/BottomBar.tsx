@@ -2,7 +2,7 @@ import { useMobile } from "@/util/useMobile";
 import { GithubLink } from "./GithubLink";
 import { MicrophoneMuteButton } from "./MicrophoneMuteButton";
 import { MicrophoneSelector } from "./MicrophoneSelector";
-import { PoweredByLiveKit } from "./PoweredByLiveKit";
+import { PoweredByLiveKit } from "./PoweredByQtune";
 
 export function BottomBar() {
   const mobile = useMobile();
@@ -17,7 +17,7 @@ export function BottomBar() {
       <div className="pr-2 flex">
         {!mobile && (
           <div className="pr-2">
-            <GithubLink />
+        
           </div>
         )}
         <PoweredByLiveKit />
